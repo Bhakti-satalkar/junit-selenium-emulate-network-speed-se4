@@ -102,6 +102,13 @@ DesiredCapabilities capabilities = new DesiredCapabilities();
         capabilities.setCapability("name", "Selenium 4 Test");
         capabilities.setCapability("plugin", "git-junit");
 ```
+### Set network conditions
+
+To set network conditions, devTools can be used like so:
+
+```java
+devTools.send(Network.emulateNetworkConditions(false, 0, 2 * 1024 * 1024, 2 * 1024 * 1024, Optional.empty()));
+```
 
 ### Executing the Test
 
